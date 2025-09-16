@@ -13,12 +13,12 @@
    <!-- add a button here for adding new item -->
     <button id="add" onclick="add()">Add</button>
    <ul id="list">
-      <li id="notebook">Notebook<!--<button>Delete</button></li>--> <button onclick="deleteListItem('notebook')">Delete</button></li>
-      <li id="jello">Jello <button onclick="deleteListItem('jello')">Delete</button></li>
-      <li id="spinach">Spinach <button onclick="deleteListItem('spinach')">Delete</button></li>
-      <li id="rice">Rice <button onclick="deleteListItem('rice')">Delete</button></li>
-      <li id="cake">Birthday Cake <button onclick="deleteListItem('cake')">Delete</button></li>
-      <li id="candle">Candles<button onclick="deleteListItem('candle')">Delete</button></li> 
+      <li id="notebook">Notebook<!--<button>Delete</button></li>--> <button onclick="deleteListItem(this)">Delete</button></li>
+      <li id="jello">Jello <button onclick="deleteListItem(this)">Delete</button></li>
+      <li id="spinach">Spinach <button onclick="deleteListItem(this)">Delete</button></li>
+      <li id="rice">Rice <button onclick="deleteListItem(this)">Delete</button></li>
+      <li id="cake">Birthday Cake <button onclick="deleteListItem(this)">Delete</button></li>
+      <li id="candle">Candles<button onclick="deleteListItem(this)">Delete</button></li> 
    </ul>
 
    <script>
@@ -41,9 +41,9 @@
         element.appendChild(item)
       }
 
-      function deleteListItem (id) {
+      function deleteListItem (element) {
         // access the list to remove an element from
-        document.getElementById(id).remove()
+        element.parentElement.remove()
       }
 
    </script>
