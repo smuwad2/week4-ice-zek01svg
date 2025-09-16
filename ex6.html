@@ -19,7 +19,25 @@
     <script>
         
         // add code here
-        
+        function addToCart(item) {
+            // create the element
+            var li = document.createElement('li')
+            // create a node
+            var node = document.createTextNode(item)
+            // append the node to the created element
+            li.appendChild(node)
+            // acceess the element to append the new element to
+            var element = document.getElementById('shopList')
+            // append the new element
+            element.appendChild(li)
+        }
+
+        var dropdown = document.getElementById('select_item')
+        dropdown.addEventListener('change', (event) => {
+            var selectedValue = event.target.value
+
+            addToCart(selectedValue)
+        })
         
     </script>
 
